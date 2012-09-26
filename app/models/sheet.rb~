@@ -1,0 +1,4 @@
+class Sheet < ActiveRecord::Base
+  attr_accessible :age, :country, :firstname, :lastname
+  has_attached_file
+end

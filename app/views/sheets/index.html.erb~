@@ -1,0 +1,28 @@
+<h1>Upload csv file</h1>
+ <%= form_for :sheet, :url => {:action =>'upload_csv'}, :multipart => true do |f| %>
+<%= f.file_field :sheet %>
+<br/>
+    <%= submit_tag "Upload sheet" %>
+<% end %>
+
+<br /><br />
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+    <th>Country</th>
+  </tr>
+
+<% @sheets.each do |sheet| %>
+  <tr>
+    <td><%= sheet.firstname %></td>
+    <td><%= sheet.lastname %></td>
+    <td><%= sheet.age %></td>
+    <td><%= sheet.country %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

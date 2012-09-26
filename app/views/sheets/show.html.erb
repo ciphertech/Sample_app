@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @sheet.firstname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @sheet.lastname %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @sheet.age %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @sheet.country %>
+</p>
+
+
+<%= link_to 'Edit', edit_sheet_path(@sheet) %> |
+<%= link_to 'Back', sheets_path %>
